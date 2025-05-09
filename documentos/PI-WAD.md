@@ -79,6 +79,13 @@ Critério de aceite 3 | CR3: O usuário pode optar por ativar ou desativar as no
 
 Nesta primeira etapa do projeto, foram utilizadas 3 tabelas: users, categories e tasks. Organizadas de maneira relacional, permitindo o acesso a informações de diferentes tabelas por meio de “Primary Keys” e “Foreign Keys”.
 
+A tabela ``user`` armazena informações do usuário e contém 3 atributos: id (Armazena a Primary Key), name, email. Esta tabela está relacionada com as tabelas categories e tasks.
+
+A tabela ``categories`` é responsável por organizar as tarefas e possui 4 atributos: id, name, color(para personalização na interface), user_id (foreign key que referencia “id” na tabela “users”)
+
+A tabela ``tasks`` armazena as tarefas criadas pelo usuário e contém 7 atributos: id, title (título da tarefa), description (detalhamento/descrição da tarefa), created_at (data e hora da criação da tarefa em formato de timestamp), due_date(data limite estipulada pelo usuário para a tarefa ser concluída), user_id (foreign key que referencia “id” na tabela “users”), category_id (foreign key que referencia “id” na tabela “categories”)
+
+
 ### Modelo Relacional
 <div align="center">
     <sub>FIGURA X - Modelo Relacional</sub>
