@@ -95,7 +95,7 @@ A tabela ``tasks`` armazena as tarefas criadas pelo usuário e contém 7 atribut
 
 ### Modelo Físico
 
-```
+``` sql
 drop table if exists tasks; 
 drop table if exists categories;
 drop table if exists users;
