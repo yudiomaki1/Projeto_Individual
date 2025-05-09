@@ -77,9 +77,45 @@ Critério de aceite 3 | CR3: O usuário pode optar por ativar ou desativar as no
 
 ### 3.1. Modelagem do banco de dados  (Semana 3)
 
-*Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
+Nesta primeira etapa do projeto, foram utilizadas 3 tabelas: users, categories e tasks. Organizadas de maneira relacional, permitindo o acesso a informações de diferentes tabelas por meio de “Primary Keys” e “Foreign Keys”.
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+### Modelo Relacional
+<div align="center">
+    <sub>FIGURA X - Modelo Relacional</sub>
+        <img src="assets/estrutura-de-dados.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+### Modelo Físico
+
+```
+drop table if exists tasks; 
+drop table if exists categories;
+drop table if exists users;
+create table users (
+  id uuid primary key default gen_random_uuid(), /*O uuid gera automaticamente um id, utilizando o gen_random_uuid*/
+  name varchar(100) not null,
+  email varchar(100) unique not null
+);
+
+create table categories (
+  id uuid primary key default gen_random_uuid(),
+  name varchar(100),
+  color varchar(100),
+  user_id uuid references users(id) 
+);
+
+create table tasks (
+  id uuid primary key default gen_random_uuid(),
+  title varchar(100),
+  description text, /*"text" faz com que não tenha limite de letras*/
+  created_at timestamp default now(),
+  due_date date,
+  user_id uuid references users(id),
+  category_id uuid references categories(id)
+);
+```
+O modelo físico pode ser consultado [**aqui**](..\scripts\init.sql)
 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
