@@ -140,7 +140,19 @@ O modelo físico pode ser consultado [**aqui**](..\scripts\init.sql)
 
 ### 3.3. Wireframes (Semana 03)
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+O wireframe é utilizado para ilustrar, de maneira simples, o design e o fluxo de um site. Esse processo é de extrema importância para a validação do layout e da aparência do site antes de sua versão final, além de auxiliar a equipe de design durante o desenvolvimento do projeto.
+
+<div align="center">
+    <sub>FIGURA X - Wireframe</sub>
+        <img src="assets/wireframe_PI.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+A primeira tela do site será a de login, onde o usuário deverá preencher informações como e-mail e senha, que serão armazenadas no banco de dados. Dessa forma, garante-se que o usuário tenha segurança e acesso à sua conta pessoal.
+
+O calendário será personalizável, permitindo que o usuário adicione lembretes a datas importantes. Isso proporciona uma visualização clara e objetiva das tarefas e compromissos ao longo do mês.
+
+As anotações permitem que o usuário crie e gerencie informações a qualquer momento, com a possibilidade de vinculá-las a datas específicas. Essa funcionalidade é útil para realizar anotações rápidas, planejamentos pessoais ou checklists.
 
 ### 3.4. Guia de estilos (Semana 05)
 
