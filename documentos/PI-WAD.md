@@ -125,18 +125,23 @@ create table tasks (
 O modelo físico pode ser consultado [**aqui**](..\scripts\init.sql)
 
 ### 3.1.1 BD e Models (Semana 5)
-*Descreva aqui os Models implementados no sistema web*
+Os models são responsáveis por realizar as interações diretamente com o banco de dados, por meio das funções de CRUD (Create, Read, Update e Delete), que são utilizadas para manipular os dados.
+Neste projeto, os models estão embutidos diretamente nos controllers, por meio de comandos SQL.
+No Taskly, foram implementadas quatro funções principais: ``criarTarefa``, ``listarTarefa``, ``editarTarefa`` e ``excluirTarefa``.
+
 
 ### 3.2. Arquitetura (Semana 5)
 
-*Posicione aqui o diagrama de arquitetura da sua solução de aplicação web. Atualize sempre que necessário.*
+A função ``model`` é responsável por interagir com o banco de dados utilizando métodos como: Select, Insert, Update e Delete. Dentro do projeto, foram utilizados os modelos ``tasks``, ``categories`` e ``users``.
+O ``controller`` é responsável por receber as requisições do cliente e repassa-las ao model e à view. Porém neste projeto o model e o controller estão integrados. Temos os controllers ``TarefaController`` e ``UserController``.
+A ``view`` é responsável pelo front-end, ou seja, pela interface onde o usuário faz requisições e interage com o servidor.
 
-**Instruções para criação do diagrama de arquitetura**  
-- **Model**: A camada que lida com a lógica de negócios e interage com o banco de dados.
-- **View**: A camada responsável pela interface de usuário.
-- **Controller**: A camada que recebe as requisições, processa as ações e atualiza o modelo e a visualização.
-  
-*Adicione as setas e explicações sobre como os dados fluem entre o Model, Controller e View.*
+
+<div align="center">
+    <sub>FIGURA X - Diagrama MVC</sub>
+        <img src="assets/diagrama-mvc.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
 
 ### 3.3. Wireframes (Semana 03)
 
@@ -165,7 +170,35 @@ As anotações permitem que o usuário crie e gerencie informações a qualquer 
 
 ### 3.6. WebAPI e endpoints (Semana 05)
 
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
+Os endpoints permitem a comunicação entre o cliente e o servidor de uma aplicação. Eles definem as rotas que devem ser seguidas para acessar determinadas informações no banco de dados. 
+
+``` js
+//index.js
+const express = require('express');
+const router = express.Router();
+const TarefaController = require('../controllers/TarefaController');
+
+router.post('/tarefas', TarefaController.criarTarefa);
+router.get('/tarefas', TarefaController.listarTarefas);
+router.put('/tarefas/:id', TarefaController.editarTarefa);
+router.delete('/tarefas/:id', TarefaController.excluirTarefa);
+
+module.exports = router;
+```
+``` js
+//userRoutes.js
+const express = require('express');
+const router = express.Router();
+const userController = require('../controllers/userController');
+
+router.get('/', userController.getAllUsers);
+router.get('/:id', userController.getUserById);
+router.post('/', userController.createUser);
+router.put('/:id', userController.updateUser);
+router.delete('/:id', userController.deleteUser);
+
+module.exports = router;
+```
 
 ### 3.7 Interface e Navegação (Semana 07)
 
