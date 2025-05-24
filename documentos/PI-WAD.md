@@ -166,7 +166,31 @@ As anotações permitem que o usuário crie e gerencie informações a qualquer 
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 
-*Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
+O protótipo de alta fidelidade é fundamental no desenvolvimento de um projeto, representando, de maneira próxima, como será a aparência e o funcionamento da aplicação.
+O Taskly possui três telas, sendo elas: a tela de login, o calendário e a tela de anotações.
+A tela de login possui a opção de criar uma conta ou entrar com o Google. Caso o usuário já possua uma conta, ele pode clicar em “Entrar na sua conta”.
+O calendário funciona como a tela principal do Taskly e oferece a funcionalidade de adicionar lembretes aos dias. Os lembretes são personalizáveis e podem conter anotações ao serem clicados.
+A tela de anotações possui diversos campos para registros, com a possibilidade de criar novos campos a qualquer momento.
+
+O protótipo completo pode ser acessado<a href="https://www.figma.com/design/A93wgDXwdGWfYzQXAtMJK0/PI---Prot%C3%B3tipo-de-alta-fidelidade?node-id=0-1&p=f&t=sscWPfWBo1C92h9r-0"> aqui</a>
+
+<div align="center">
+    <sub>FIGURA X - Tela de Login</sub>
+        <img src="assets/login-PI.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Calendário</sub>
+        <img src="assets/calendario.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Tela de Anotações </sub>
+        <img src="assets/Anotacoes-PI.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
 
 ### 3.6. WebAPI e endpoints (Semana 05)
 
