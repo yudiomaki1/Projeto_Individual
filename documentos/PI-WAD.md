@@ -162,8 +162,11 @@ As anotações permitem que o usuário crie e gerencie informações a qualquer 
 ### 3.4. Guia de estilos (Semana 05)
 
 O guia de estilos é essencial para manter a consistência visual do projeto ao desenvolver novas funcionalidades, interfaces e componentes visuais.
+
 A tipografia deve ser sempre consultada para garantir que os tamanhos de fonte estejam adequados ao contexto e à hierarquia visual.
+
 Seguir a paleta de cores definida é fundamental para preservar a identidade visual da aplicação.
+
 As variações do logotipo devem ser aplicadas de acordo com a cor do fundo, garantindo legibilidade e contraste adequados.
 
 
@@ -176,9 +179,13 @@ As variações do logotipo devem ser aplicadas de acordo com a cor do fundo, gar
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 
 O protótipo de alta fidelidade é fundamental no desenvolvimento de um projeto, representando, de maneira próxima, como será a aparência e o funcionamento da aplicação.
+
 O Taskly possui três telas, sendo elas: a tela de login, o calendário e a tela de anotações.
+
 A tela de login possui a opção de criar uma conta ou entrar com o Google. Caso o usuário já possua uma conta, ele pode clicar em “Entrar na sua conta”.
+
 O calendário funciona como a tela principal do Taskly e oferece a funcionalidade de adicionar lembretes aos dias. Os lembretes são personalizáveis e podem conter anotações ao serem clicados.
+
 A tela de anotações possui diversos campos para registros, com a possibilidade de criar novos campos a qualquer momento.
 
 O protótipo completo pode ser acessado<a href="https://www.figma.com/design/A93wgDXwdGWfYzQXAtMJK0/PI---Prot%C3%B3tipo-de-alta-fidelidade?node-id=0-1&p=f&t=sscWPfWBo1C92h9r-0"> aqui</a>
