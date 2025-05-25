@@ -161,8 +161,17 @@ As anotações permitem que o usuário crie e gerencie informações a qualquer 
 
 ### 3.4. Guia de estilos (Semana 05)
 
-*Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução.*
+O guia de estilos é essencial para manter a consistência visual do projeto ao desenvolver novas funcionalidades, interfaces e componentes visuais.
+A tipografia deve ser sempre consultada para garantir que os tamanhos de fonte estejam adequados ao contexto e à hierarquia visual.
+Seguir a paleta de cores definida é fundamental para preservar a identidade visual da aplicação.
+As variações do logotipo devem ser aplicadas de acordo com a cor do fundo, garantindo legibilidade e contraste adequados.
 
+
+<div align="center">
+    <sub>FIGURA X - Guia de estilos</sub>
+        <img src="assets/Guia-de-estilos.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
 
 ### 3.5. Protótipo de alta fidelidade (Semana 05)
 
