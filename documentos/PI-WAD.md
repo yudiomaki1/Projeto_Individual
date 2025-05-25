@@ -139,7 +139,7 @@ A ``view`` é responsável pelo front-end, ou seja, pela interface onde o usuár
 
 <div align="center">
     <sub>FIGURA X - Diagrama MVC</sub>
-        <img src="assets/diagrama-mvc.png">
+        <img src="assets/diagrama-MVC.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
