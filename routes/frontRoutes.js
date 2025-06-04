@@ -5,12 +5,19 @@ const path = require('path');
 // Roteamento para páginas dinâmicas
 router.get('/', (req, res) => {
   res.render(path.join(__dirname, '../views/layout/main'), {
-    pageTitle: 'Página Inicial',
-    content: path.join(__dirname, '../views/pages/page1')
+    pageTitle: 'Login',
+    content: path.join(__dirname, '../views/pages/login')
   });
 });
 
-router.get('/about', (req, res) => {
+router.get('/home', (req, res) => {
+  res.render(path.join(__dirname, '../views/layout/main'), {
+    pageTitle: 'Página Inicial',
+    content: path.join(__dirname, '../views/pages/home')
+  });
+});
+
+router.get('/notes', (req, res) => {
   res.render(path.join(__dirname, '../views/layout/main'), {
     pageTitle: 'Página Inicial',
     content: path.join(__dirname, '../views/pages/page2')

@@ -1,10 +1,8 @@
-drop table if exists tasks; 
-drop table if exists categories;
-drop table if exists users;
 create table users (
   id uuid primary key default gen_random_uuid(), /*O uuid gera automaticamente um id, utilizando o gen_random_uuid*/
   name varchar(100) not null,
-  email varchar(100) unique not null
+  email varchar(100) unique not null,
+  password varchar(100) not null
 );
 
 create table categories (
