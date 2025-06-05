@@ -1,4 +1,4 @@
-const loginModel = require('../models/loginModels'); 
+const loginModel = require('../models/loginModel'); 
 const loginController = {
     login: async (req, res) => {
         const { email, password } = req.body; 
@@ -7,7 +7,7 @@ const loginController = {
             req.session.authenticated = true; 
             console.log(result.userId);
             req.session.userId = result.user; 
-            res.redirect('/home') 
+            res.redirect('/home');
         }
         else 
         {

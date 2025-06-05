@@ -14,6 +14,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Middlewares
+const session = require('express-session');
+app.use(session({
+  secret: 'seuSegredoAqui',
+  resave: false,
+  saveUninitialized: false
+}));
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
