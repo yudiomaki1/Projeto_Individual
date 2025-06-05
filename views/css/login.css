@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff;
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background: #fff;
+    padding: 40px 32px 32px 32px;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.login-label {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #fafbfc;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #1677cc;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #fff;
+    color: #222;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.google-btn:hover {
+    background: #f5f5f5;
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 0.98rem;
+    color: #444;
+    margin-top: 8px;
+}
+
+.login-footer a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

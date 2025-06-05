@@ -3,192 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Taskly - Calendário</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #fcfcfc;
-            color: #222;
-        }
-        .sidebar {
-            width: 260px;
-            background: #fff;
-            height: 100vh;
-            border-right: 2px solid #e0e0e0;
-            position: fixed;
-            left: 0;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .sidebar-header {
-            padding: 32px 0 0 32px;
-            font-size: 2.5rem;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 400;
-            border-bottom: 2px solid #bdbdbd;
-            margin-bottom: 24px;
-        }
-        .sidebar-menu {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 24px;
-        }
-        .sidebar-menu-btn {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0 10px 24px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            background: #e0e0e0;
-            border: none;
-            border-radius: 8px;
-            margin: 0 16px 0 16px;
-            cursor: pointer;
-            outline: none;
-        }
-        .sidebar-menu-btn.inactive {
-            background: none;
-            color: #222;
-            font-weight: 500;
-        }
-        .sidebar-menu-btn svg {
-            width: 22px;
-            height: 22px;
-        }
-        .sidebar-footer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 24px 0 24px 24px;
-            font-size: 1.1rem;
-            border-top: 2px solid #e0e0e0;
-        }
-        .sidebar-footer svg {
-            width: 28px;
-            height: 28px;
-        }
-        .main {
-            margin-left: 260px;
-            padding: 0 40px;
-        }
-        .calendar-header {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            margin-top: 32px;
-            margin-bottom: 8px;
-        }
-        .calendar-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        .calendar-controls {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .calendar-controls button, .calendar-controls span {
-            background: #e0e0e0;
-            border: none;
-            border-radius: 8px;
-            padding: 6px 18px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-        .calendar-controls span {
-            background: #bdbdbd;
-            cursor: default;
-        }
-        .calendar-month {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 16px;
-            margin-top: 0;
-        }
-        .calendar-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-        }
-        .calendar-table th, .calendar-table td {
-            border: 1px solid #888;
-            width: 14.28%;
-            height: 70px;
-            vertical-align: top;
-            text-align: left;
-            padding: 4px 6px;
-            font-size: 1.1rem;
-            position: relative;
-        }
-        .calendar-table th {
-            color: #888;
-            font-weight: 600;
-            font-size: 1.1rem;
-            background: #fafafa;
-            text-align: center;
-        }
-        .event {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 2px 10px;
-            border-radius: 6px;
-            font-size: 0.98rem;
-            font-weight: 500;
-        }
-        .event-red { background: #ffb3b3; color: #222; }
-        .event-blue { background: #1dc4f7; color: #fff; }
-        .event-green { background: #3cff3c; color: #222; }
-        .event-yellow { background: #fff94d; color: #222; }
-        .calendar-table td {
-            background: #fff;
-        }
-        @media (max-width: 900px) {
-            .sidebar { width: 100px; }
-            .main { margin-left: 100px; }
-            .sidebar-header { font-size: 1.5rem; padding-left: 10px; }
-            .sidebar-menu-btn { font-size: 0.9rem; padding-left: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div>
-            <div class="sidebar-header">Taskly</div>
-            <div class="sidebar-menu">
-                <button class="sidebar-menu-btn">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="3" y="4" width="18" height="18" rx="2"/>
-                        <path d="M16 2v4M8 2v4M3 10h18"/>
-                    </svg>
-                    Calendário
-                </button>
-                <button class="sidebar-menu-btn inactive">
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M4 19.5V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14.5"/>
-                        <path d="M9 17h6"/>
-                        <path d="M9 13h6"/>
-                        <path d="M9 9h6"/>
-                    </svg>
-                    Anotações
-                </button>
-            </div>
-        </div>
-        <div class="sidebar-footer">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <circle cx="12" cy="8" r="4"/>
-                <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
-            </svg>
-            <span>Usuário</span>
-        </div>
-    </div>
+    <%- include('../components/sidebar') %>
     <div class="main">
         <div class="calendar-header">
             <span class="calendar-title">Calendário</span>
@@ -227,7 +45,6 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7
-                        <div class="event event-red">Entrevista de emprego</div>
                     </td>
                     <td>8</td>
                     <td>9</td>
@@ -245,7 +62,6 @@
                 <tr>
                     <td>18</td>
                     <td>19
-                        <div class="event event-green">Planning</div>
                     </td>
                     <td>20</td>
                     <td>21</td>
@@ -255,14 +71,12 @@
                 </tr>
                 <tr>
                     <td>25
-                        <div class="event event-blue">Entrega de Ponderada</div>
                     </td>
                     <td>26</td>
                     <td>27</td>
                     <td>28</td>
                     <td>29</td>
                     <td>30
-                        <div class="event event-yellow">Entrega de artefatos</div>
                     </td>
                     <td>31</td>
                 </tr>

@@ -12,6 +12,8 @@ const port = 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use('/css', express.static(path.join(__dirname, 'views/css')));
+app.use('/js', express.static(path.join(__dirname, 'views/js')));
 
 // Middlewares
 const session = require('express-session');

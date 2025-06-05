@@ -11,7 +11,7 @@ const loginController = {
         }
         else 
         {
-            res.redirect('/login?error=1');
+            res.redirect('/?error=1');
         }
     }
 };
