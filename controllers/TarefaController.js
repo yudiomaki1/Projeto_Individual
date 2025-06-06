@@ -28,6 +28,17 @@ exports.listarTarefas = async (req, res) => {
   }
 };
 
+exports.listarTarefasPorId = async (req, res) => {
+  const query = 'SELECT * FROM tasks WHERE id = $1';
+
+  try {
+    const result = await pool.query(query);
+    res.status(200).json(result.rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 // Editar uma tarefa
 exports.editarTarefa = async (req, res) => {
   const { id } = req.params;

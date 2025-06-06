@@ -13,26 +13,15 @@
     </div>
     <div class="notes-divider"></div>
     <div class="notes-grid">
+    <% notes.forEach(note => { %>
         <div class="note-card">
-            <div class="note-title">Lista de compras</div>
-            <div class="note-content"></div>
+            <div class="note-title"><%= note.title %></div>
+            <div class="note-content"><%= note.description %></div>
         </div>
-        <div class="note-card">
-            <div class="note-title">Tarefas</div>
-            <div class="note-content"></div>
-        </div>
-        <div class="note-card">
-            <div class="note-title">Despesas</div>
-            <div class="note-content"></div>
-        </div>
-        <div class="note-card">
-            <div class="note-title">Anotações da faculdade</div>
-            <div class="note-content"></div>
-        </div>
-        <div class="note-card note-add">
-            <div class="note-add-plus">+</div>
-        </div>
+    <% }) %>
+    </div>
     </div>
 </div>
+
 </body>
 </html>
