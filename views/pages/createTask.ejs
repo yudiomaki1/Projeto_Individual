@@ -8,10 +8,20 @@
 </head>
 <body>
     <%- include('../components/sidebar') %>
-    <div class="container">
-        
-    </div>
-</form>
+    <div class="main">
+        <div class="create-task-header">
+            <span class="create-task-title">Nova tarefa</span>
+        </div>
+        <div class="create-task-divider"></div>
+        <form class="create-task-form" action="/tarefas" method="POST">
+            <label for="title" class="create-task-label">Título</label>
+            <input type="text" id="title" name="title" class="create-task-input" placeholder="Digite o título da tarefa" required>
+
+            <label for="description" class="create-task-label">Descrição</label>
+            <textarea id="description" name="description" class="create-task-input" rows="4" placeholder="Descreva sua tarefa"></textarea>
+
+            <button type="submit" class="create-task-btn">Criar tarefa</button>
+        </form>
     </div>
 </body>
 </html>
