@@ -10,6 +10,13 @@ router.get('/', (req, res) => {
   });
 });
 
+router.get('/CreateAccount', (req, res) => {
+  res.render('layout/main', {
+    pageTitle: 'Criar Conta',
+    content: '../pages/createAccount'
+  });
+});
+
 router.get('/home', (req, res) => {
   res.render('layout/main', {
     pageTitle: 'Página Inicial',
@@ -20,7 +27,7 @@ router.get('/home', (req, res) => {
 router.get('/notes', (req, res) => {
   res.render('layout/main', {
     pageTitle: 'Página Inicial',
-    content: '../pages/page2'
+    content: '../pages/notes'
   });
 });
 

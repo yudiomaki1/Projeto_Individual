@@ -23,11 +23,11 @@ const getUserById = async (id) => {
 };
 
 // Função para criar um novo usuário
-const createUser = async (name, email) => {
+const createUser = async (name, email, password) => {
   try {
     const result = await db.query(
-      'INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *',
-      [name, email]
+      'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *',
+      [name, email, password]
     );
     return result.rows[0];
   } catch (error) {

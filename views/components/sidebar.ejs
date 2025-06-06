@@ -29,3 +29,12 @@
             <span>Usuário</span>
         </div>
     </div>
+    <script>
+        fetch('/api/user')
+            .then(response => response.json())
+            .then(data => {
+                const userSpan = document.querySelector('.sidebar-footer span');
+                userSpan.textContent = data.name || 'Usuário';
+            })
+            .catch(error => console.error('Erro ao carregar usuário:', error));
+    </script>

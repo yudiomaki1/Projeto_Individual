@@ -1,0 +1,141 @@
+.sidebar {
+    width: 260px;
+    background: #fff;
+    height: 100vh;
+    border-right: 2px solid #e0e0e0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header {
+    padding: 32px 0 0 32px;
+    font-size: 2.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    border-bottom: 2px solid #bdbdbd;
+    margin-bottom: 24px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.sidebar-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0 10px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    margin: 0 16px 0 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidebar-menu-btn.inactive {
+    background: none;
+    color: #222;
+    font-weight: 500;
+}
+
+.sidebar-menu-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 0 24px 24px;
+    font-size: 1.1rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+.sidebar-footer svg {
+    width: 28px;
+    height: 28px;
+}
+
+.main {
+    margin-left: 260px;
+    padding: 0 40px;
+}
+.notes-header {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+}
+.notes-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.notes-divider {
+    border-bottom: 2px solid #bdbdbd;
+    margin: 12px 0 28px 0;
+}
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    gap: 32px;
+    max-width: 1200px;
+}
+.note-card {
+    background: #dbdbdb;
+    border-radius: 10px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: none;
+    min-width: 260px;
+}
+.note-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 16px 16px 10px 16px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.note-content {
+    flex: 1;
+    border-top: 1px solid #444;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.note-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.note-add-plus {
+    font-size: 3.5rem;
+    color: #555;
+    user-select: none;
+}
+@media (max-width: 1100px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 220px);
+    }
+}
+@media (max-width: 700px) {
+    .main { margin-left: 0; padding: 0 10px; }
+    .notes-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+    }
+}

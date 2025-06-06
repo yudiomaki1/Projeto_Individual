@@ -1,4 +1,3 @@
-// controllers/TarefaController.js
 const pool = require('../config/db');
 
 // Criar uma nova tarefa

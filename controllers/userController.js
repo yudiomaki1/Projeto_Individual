@@ -26,10 +26,11 @@ const getUserById = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    const { name, email } = req.body;
-    const newUser = await userService.createUser(name, email);
-    res.status(201).json(newUser);
+    const { name, email, password } = req.body;
+    await userService.createUser(name, email, password);
+    res.redirect('/');
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error: error.message });
   }
 };

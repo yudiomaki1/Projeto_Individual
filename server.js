@@ -6,6 +6,7 @@ const frontRoutes = require('./routes/frontRoutes');
 const indexRoutes = require('./routes/index');
 const home = require('./routes/frontRoutes')
 const path = require('path')
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 const port = 3000;
@@ -32,6 +33,7 @@ app.use('/', home)
 
 app.use('/', indexRoutes);
 app.use('/', frontRoutes);
+app.use('/users', userRoutes); 
 
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
