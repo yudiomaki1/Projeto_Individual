@@ -242,7 +242,43 @@ module.exports = router;
 
 ### 3.7 Interface e Navegação (Semana 07)
 
-*Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+O frontend do Taskly foi desenvolvido utilizando EJS, permitindo o fluxo dinâmico de dados vindos do backend. Cada tela possui seu próprio arquivo EJS, e a sidebar foi implementada utilizando um componente, facilitando a reutilização do código.
+
+O design das telas foi baseado no guia de estilos e nos protótipos desenvolvidos 
+anteriormente no projeto, visando manter o padrão estético.
+
+Foram entregues cinco telas: ``tela de login``, ``tela de criação de conta``, ``home``, ``tela de anotações`` e ``tela de criação de anotações``. As imagens abaixo ilustram cada uma das telas desenvolvidas.
+
+
+<div align="center">
+    <sub>FIGURA X - Tela de Login </sub>
+        <img src="assets/login.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Tela de Criação de conta </sub>
+        <img src="assets/createAccount.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Home/Calendário </sub>
+        <img src="assets/home.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Tela de Anotações </sub>
+        <img src="assets/notes.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
+
+<div align="center">
+    <sub>FIGURA X - Tela de Criar Anotações </sub>
+        <img src="assets/createTask.png">
+    <sup>Fonte: Autoria própria (2025)</sup>
+</div>
 
 ---
 
