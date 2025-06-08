@@ -1,6 +1,11 @@
-# Boilerplate MVC em Node.js com PostgreSQL
+# Projeto Individual - Aplicação WEB
+Projeto Individual modulo 2 (Aplicação WEB)
 
-Este projeto é um boilerplate básico para uma aplicação Node.js seguindo o padrão MVC (Model-View-Controller), utilizando PostgreSQL como banco de dados.
+## Nome do projeto
+**Taskly**
+
+## Autor do projeto
+Yudi Nakamura Trevisani Omaki
 
 ## Requisitos
 
@@ -64,11 +69,17 @@ Estrutura de Diretórios
 -----------------------
 
 * **`config/`**: Configurações do banco de dados e outras configurações do projeto.
-* **`controllers/`**: Controladores da aplicação (lógica de negócio).
-* **`models/`**: Modelos da aplicação (definições de dados e interações com o banco de dados).
+* **`controllers/`**: Controladores da aplicação.
+* **`models/`**: Modelos da aplicação.
 * **`routes/`**: Rotas da aplicação.
 * **`tests/`**: Testes automatizados.
-* **`views/`**: Views da aplicação (se aplicável).
+* **`scripts/`**: Arquivos SQL.
+* **`services/`**: Arquivos de Organização da lógica de dados.
+* **`views/`**: Views da aplicação.
+* **`components/`**: Arquivos componentes reutilizáveis
+* **`css/`**: Arquivos de estilos CSS.
+* **`pages/`**: Arquivos EJS.
+* **`server/`**: Arquivos que inicializa o servidor.
 
 Contribuição
 ------------
