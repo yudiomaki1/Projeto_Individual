@@ -1,22 +1,20 @@
 const pool = require('../config/db');
 
-// Criar uma nova tarefa
+
 exports.criarTarefa = async (req, res) => {
-const { title, description, user_id, category_id } = req.body;
-const query = 'INSERT INTO tasks (title, description, user_id, category_id) VALUES ($1, $2, $3, $4) RETURNING *';
-const values = [title, description, user_id, category_id];
+  const { title, description, user_id, category_id } = req.body;
+  const query = 'INSERT INTO tasks (title, description, user_id, category_id) VALUES ($1, $2, $3, $4) RETURNING *';
+  const values = [title, description, user_id, category_id];
 
   try {
-    const result = await pool.query(query, values);
-    const tarefa = result.rows[0];
-    res.status(201).json(tarefa);
+    await pool.query(query, values);
+    res.redirect('/notes'); 
   } catch (err) {
     console.log(err.message)
     res.status(500).json({ error: err.message });
   }
 };
 
-// Listar todas as tarefas
 exports.listarTarefas = async (req, res) => {
   const query = 'SELECT * FROM tasks';
 
@@ -39,7 +37,6 @@ exports.listarTarefasPorId = async (req, res) => {
   }
 };
 
-// Editar uma tarefa
 exports.editarTarefa = async (req, res) => {
   const { id } = req.params;
   const { title, description } = req.body;
@@ -61,7 +58,6 @@ const values = [title, description, id];
   }
 };
 
-// Excluir uma tarefa
 exports.excluirTarefa = async (req, res) => {
   const { id } = req.params;
 

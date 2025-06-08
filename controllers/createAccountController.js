@@ -11,7 +11,7 @@ const CreateAccountController = {
         }
         else 
         {
-            res.redirect('/CreateAccount?error=1');
+            res.redirect('/createAccountError');
         }
     }
 };

@@ -6,7 +6,6 @@ let fetch;
   fetch = (await import('node-fetch')).default;
 })();
 
-// Roteamento para páginas dinâmicas
 router.get('/', (req, res) => {
   res.render('layout/main', {
     pageTitle: 'Login',
@@ -45,6 +44,13 @@ router.get('/createTask', (req, res) => {
   res.render('layout/main', {
     pageTitle: 'Criar Tarefa',
     content: '../pages/CreateTask'
+  });
+});
+
+router.get('/createAccountError', (req, res) => {
+  res.render('layout/main', {
+    pageTitle: 'Erro ao criar conta',
+    content: '../pages/createAccountError'
   });
 });
 

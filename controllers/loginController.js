@@ -1,12 +1,15 @@
 const loginModel = require('../models/loginModel'); 
+const userService = require('../services/userService'); 
+
 const loginController = {
     login: async (req, res) => {
         const { email, password } = req.body; 
         const result = await loginModel.login(email, password);
         if (result.success){
             req.session.authenticated = true; 
-            console.log(result.userId);
-            req.session.userId = result.user; 
+            req.session.userId = result.user;
+            const user = await userService.getUserById(result.user);
+            req.session.userName = user.name;
             res.redirect('/home');
         }
         else 
@@ -15,6 +18,5 @@ const loginController = {
         }
     }
 };
-
 
 module.exports = loginController;
