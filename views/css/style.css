@@ -1,11 +1,9 @@
-/* Reset básico para remover estilos padrão do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Estilo para o corpo da página */
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,7 +13,6 @@
     padding: 0;
   }
   
-  /* Estilo para o cabeçalho */
   header {
     background-color: #333;
     color: #fff;
@@ -23,7 +20,6 @@
     text-align: center;
   }
   
-  /* Estilo para a navegação dentro do cabeçalho */
   header nav ul {
     list-style-type: none;
   }
@@ -42,12 +38,10 @@
     text-decoration: underline;
   }
   
-  /* Estilo para o conteúdo principal */
   main {
     padding: 20px;
   }
   
-  /* Estilo para o rodapé */
   footer {
     background-color: #333;
     color: #fff;

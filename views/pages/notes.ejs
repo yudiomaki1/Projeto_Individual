@@ -15,8 +15,20 @@
     <div class="notes-grid">
     <% notes.forEach(note => { %>
         <div class="note-card">
-            <div class="note-title"><%= note.title %></div>
-            <div class="note-content"><%= note.description %></div>
+            <div class="note-title">
+                <%= note.title %>
+                <form action="/tarefas/<%= note.id %>?_method=DELETE" method="POST" style="display:inline;">
+                    <button type="submit" class="delete-task-btn" style="margin-left:12px;">Deletar</button>
+                </form>
+            </div>
+            <div class="note-content">
+                <%= note.description %>
+            </div>
+            <% if (note.due_date) { %>
+                <div class="note-due-date">
+                    Data limite: <%= new Date(note.due_date).toLocaleDateString('pt-BR') %>
+                </div>
+            <% } %>
         </div>
     <% }) %>
     </div>

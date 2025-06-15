@@ -39,7 +39,6 @@ router.get('/notes', async (req, res) => {
 })
 });
 
-// Roteamento para páginas dinâmicas
 router.get('/createTask', (req, res) => {
   res.render('layout/main', {
     pageTitle: 'Criar Tarefa',

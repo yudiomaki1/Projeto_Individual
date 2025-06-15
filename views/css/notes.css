@@ -110,6 +110,8 @@
     border-top-right-radius: 10px;
 }
 .note-content {
+    margin-left: 18px;
+    margin-right: 18px;
     flex: 1;
     border-top: 1px solid #444;
     border-bottom-left-radius: 10px;
@@ -125,6 +127,27 @@
     font-size: 3.5rem;
     color: #555;
     user-select: none;
+}
+.note-due-date {
+    padding: 10px 16px;
+    font-size: 0.98rem;
+    color: #555;
+    font-weight: 500;
+    background: #eaeaea;
+    margin-top: 75px;
+}
+.delete-task-btn {
+    background: #cb0000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 22px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.delete-task-btn:hover {
+    background: #b71c1c;
 }
 @media (max-width: 1100px) {
     .notes-grid {

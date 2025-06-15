@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -8,6 +7,7 @@ const home = require('./routes/frontRoutes')
 const path = require('path')
 const userRoutes = require('./routes/userRoutes');
 const notesRoutes = require('./routes/frontRoutes');
+const methodOverride = require('method-override');
 const app = express();
 const port = 3000;
 
@@ -28,6 +28,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 app.use('/', home)
 

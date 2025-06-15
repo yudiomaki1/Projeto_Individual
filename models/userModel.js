@@ -1,36 +1,33 @@
 const db = require('../config/db');
 
-class User {
-  static async getAll() {
+const userModel = {
+  getAll: async () => {
     const result = await db.query('SELECT * FROM users');
     return result.rows;
-  }
-
-  static async getById(id) {
+  },
+  getById: async (id) => {
     const result = await db.query('SELECT * FROM users WHERE id = $1', [id]);
     return result.rows[0];
-  }
-
-  static async create(name, email, password) {
+  },
+  create: async (name, email, password) => {
     const result = await db.query(
       'INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *',
       [name, email, password]
     );
     return result.rows[0];
-  }
-
-  static async update(id, data) {
+  },
+  update: async (id, data) => {
+    const { name, email } = data;
     const result = await db.query(
       'UPDATE users SET name = $1, email = $2 WHERE id = $3 RETURNING *',
-      [data.name, data.email, id]
+      [name, email, id]
     );
     return result.rows[0];
-  }
-
-  static async delete(id) {
+  },
+  delete: async (id) => {
     const result = await db.query('DELETE FROM users WHERE id = $1 RETURNING *', [id]);
-    return result.rowCount > 0;
+    return result.rows[0];
   }
-}
+};
 
-module.exports = User;
+module.exports = userModel;

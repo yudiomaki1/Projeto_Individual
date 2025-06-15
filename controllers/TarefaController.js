@@ -1,76 +1,75 @@
-const pool = require('../config/db');
+const tasksModel = require('../models/tasksModel');
 
+exports.getAllTasks = async (req, res) => {
+    try {
+        const notes = await tasksModel.getAll();
+        res.render('layout/main', {
+            pageTitle: 'Anotações',
+            content: '../pages/notes',
+            notes
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
 
+// Criar tarefa
 exports.criarTarefa = async (req, res) => {
-  const { title, description, user_id, category_id } = req.body;
-  const query = 'INSERT INTO tasks (title, description, user_id, category_id) VALUES ($1, $2, $3, $4) RETURNING *';
-  const values = [title, description, user_id, category_id];
-
-  try {
-    await pool.query(query, values);
-    res.redirect('/notes'); 
-  } catch (err) {
-    console.log(err.message)
-    res.status(500).json({ error: err.message });
-  }
+    console.log(req.body); 
+    const { title, description, user_id, category_id, due_date } = req.body;
+    try {
+        await tasksModel.create(title, description, user_id, category_id, due_date);
+        res.redirect('/notes');
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 };
 
+// Listar todas as tarefas
 exports.listarTarefas = async (req, res) => {
-  const query = 'SELECT * FROM tasks';
-
-  try {
-    const result = await pool.query(query);
-    res.status(200).json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+    try {
+        const tasks = await tasksModel.getAll();
+        res.status(200).json(tasks);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 };
 
-exports.listarTarefasPorId = async (req, res) => {
-  const query = 'SELECT * FROM tasks WHERE id = $1';
-
-  try {
-    const result = await pool.query(query);
-    res.status(200).json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+// Buscar tarefa por ID
+exports.buscarTarefaPorId = async (req, res) => {
+    try {
+        const task = await tasksModel.getById(req.params.id);
+        if (task) {
+            res.status(200).json(task);
+        } else {
+            res.status(404).json({ error: 'Tarefa não encontrada' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
 };
 
+// Atualizar tarefa
 exports.editarTarefa = async (req, res) => {
-  const { id } = req.params;
-  const { title, description } = req.body;
-
-const query = `
-  UPDATE tasks SET title = $1, description = $2
-  WHERE id = $3 RETURNING *`;
-const values = [title, description, id];
-
-
-  try {
-    const result = await pool.query(query, values);
-    if (result.rows.length === 0) {
-      return res.status(404).json({ message: 'Tarefa não encontrada' });
+    try {
+        const updatedTask = await tasksModel.update(req.params.id, req.body);
+        if (updatedTask) {
+            res.status(200).json(updatedTask);
+        } else {
+            res.status(404).json({ error: 'Tarefa não encontrada' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
-    res.status(200).json(result.rows[0]);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
 };
 
+// Excluir tarefa
 exports.excluirTarefa = async (req, res) => {
-  const { id } = req.params;
-
-  const query = 'DELETE FROM tasks WHERE id = $1 RETURNING *';
-  const values = [id];
-
-  try {
-    const result = await pool.query(query, values);
-    if (result.rows.length === 0) {
-      return res.status(404).json({ message: 'Tarefa não encontrada' });
+    try {
+        await tasksModel.delete(req.params.id);
+        res.redirect('/notes');
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
-    res.status(200).json({ message: 'Tarefa excluída com sucesso' });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
 };
+

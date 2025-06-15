@@ -1,7 +1,5 @@
 # Web Application Document - Projeto Individual - Módulo 2 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final._**
-
 ## Taskly
 
 #### Autor do projeto <a href="https://www.linkedin.com/in/yudi-omaki/"> Yudi Omaki
@@ -32,7 +30,7 @@ O Taskly é a aplicação ideal para todos que desejam manter o controle de suas
 
 Personas são representações fictícias do usuário ideal para um determinado produto ou serviço. Elas são criadas com base em informações e dados reais sobre o público-alvo, com o objetivo de compreender melhor os usuários e suas necessidades. Isso permite que sejam feitas as adaptações necessárias ao longo do processo de desenvolvimento, garantindo que o produto final atenda de forma mais eficaz às expectativas do público.
 <div align="center">
-    <sub>FIGURA X - Persona-Lucas</sub>
+    <sub>FIGURA 1 - Persona-Lucas</sub>
         <img src="assets/persona-WAD.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -88,7 +86,7 @@ A tabela ``tasks`` armazena as tarefas criadas pelo usuário e contém 7 atribut
 
 ### Modelo Relacional
 <div align="center">
-    <sub>FIGURA X - Modelo Relacional</sub>
+    <sub>FIGURA 2 - Modelo Relacional</sub>
         <img src="assets/estrutura-de-dados.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -138,7 +136,7 @@ A ``view`` é responsável pelo front-end, ou seja, pela interface onde o usuár
 
 
 <div align="center">
-    <sub>FIGURA X - Diagrama MVC</sub>
+    <sub>FIGURA 3 - Diagrama MVC</sub>
         <img src="assets/diagrama-MVC.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -148,7 +146,7 @@ A ``view`` é responsável pelo front-end, ou seja, pela interface onde o usuár
 O wireframe é utilizado para ilustrar, de maneira simples, o design e o fluxo de um site. Esse processo é de extrema importância para a validação do layout e da aparência do site antes de sua versão final, além de auxiliar a equipe de design durante o desenvolvimento do projeto.
 
 <div align="center">
-    <sub>FIGURA X - Wireframe</sub>
+    <sub>FIGURA 4 - Wireframe</sub>
         <img src="assets/wireframe_PI.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -171,7 +169,7 @@ As variações do logotipo devem ser aplicadas de acordo com a cor do fundo, gar
 
 
 <div align="center">
-    <sub>FIGURA X - Guia de estilos</sub>
+    <sub>FIGURA 5 - Guia de estilos</sub>
         <img src="assets/Guia-de-estilos.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -191,19 +189,19 @@ A tela de anotações possui diversos campos para registros, com a possibilidade
 O protótipo completo pode ser acessado<a href="https://www.figma.com/design/A93wgDXwdGWfYzQXAtMJK0/PI---Prot%C3%B3tipo-de-alta-fidelidade?node-id=0-1&p=f&t=sscWPfWBo1C92h9r-0"> aqui</a>
 
 <div align="center">
-    <sub>FIGURA X - Tela de Login</sub>
+    <sub>FIGURA 6 - Tela de Login</sub>
         <img src="assets/login-PI.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Calendário</sub>
+    <sub>FIGURA 7 - Calendário</sub>
         <img src="assets/calendario.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Tela de Anotações </sub>
+    <sub>FIGURA 8 - Tela de Anotações </sub>
         <img src="assets/Anotacoes-PI.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -251,31 +249,31 @@ Foram entregues cinco telas: ``tela de login``, ``tela de criação de conta``, 
 
 
 <div align="center">
-    <sub>FIGURA X - Tela de Login </sub>
+    <sub>FIGURA 9 - Tela de Login </sub>
         <img src="assets/login.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Tela de Criação de conta </sub>
+    <sub>FIGURA 10 - Tela de Criação de conta </sub>
         <img src="assets/createAccount.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Home/Calendário </sub>
+    <sub>FIGURA 11 - Home/Calendário </sub>
         <img src="assets/home.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Tela de Anotações </sub>
+    <sub>FIGURA 12 - Tela de Anotações </sub>
         <img src="assets/notes.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
 
 <div align="center">
-    <sub>FIGURA X - Tela de Criar Anotações </sub>
+    <sub>FIGURA 13 - Tela de Criar Anotações </sub>
         <img src="assets/createTask.png">
     <sup>Fonte: Autoria própria (2025)</sup>
 </div>
@@ -286,19 +284,19 @@ Foram entregues cinco telas: ``tela de login``, ``tela de criação de conta``, 
 
 ### 4.1 Demonstração do Sistema Web (Semana 8)
 
-*VIDEO: Insira o link do vídeo demonstrativo nesta seção*
-*Descreva e ilustre aqui o desenvolvimento do sistema web completo, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+O vídeo abaixo demonstra a interface e as principais funcionalidades do Taskly, como as telas de login, criação de conta, home, anotações e a tela de criar uma nova anotação. O design de software utilizado foi a arquitetura MVC, garantindo a organização e separação de responsabilidades do projeto. Para o armazenamento de dados foi utilizado o PostgreSQL.
+
+O link do vídeo demonstrativo pode ser acessado<a href="https://drive.google.com/file/d/1BRmI9-JNOuEe2NZ6q6pEKeT-pWJdybFE/view?usp=sharing"> aqui</a>
+
 
 ### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
 
-*Indique pontos fortes e pontos a melhorar de maneira geral.*
-*Relacione também quaisquer outras ideias que você tenha para melhorias futuras.*
+O Taskly apresenta a implementação funcional das principais telas propostas como, login, criação de conta, home, anotações e a tela de nova anotação.
 
+Como próximos passos, seria interessante a implementação da visualização das tasks no dia relativo a seu prazo no calendário, e a possibilidade da edição de anotações, tornando possível a alteração do título, descrição e prazo final.
 
 
 ## <a name="c5"></a>5. Referências
-
-_Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site:_<br>
 
 ---
 ---
